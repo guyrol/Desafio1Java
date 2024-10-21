@@ -53,6 +53,10 @@ public class Main {
                 case 3:
                     System.out.println("Digite o valor que deseja sacar:");
                     valor = leitura.nextDouble();
+                    if (valor > saldo){
+                        System.out.println("Saldo insuficiente");
+                        break;
+                    }
                     saldo -= valor;
                     System.out.println("Valor de saque realizado: " + valor);
                     System.out.println("Saldo atual: " + saldo);
