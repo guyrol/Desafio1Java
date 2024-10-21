@@ -6,6 +6,8 @@ public class Main {
         //entradas do usuario
         Scanner leitura = new Scanner(System.in);
         int opcao = 0;
+        double valor = 0;
+
 
         //dados do cliente
         String nome = "Agnaldo Rozario";
@@ -34,16 +36,24 @@ public class Main {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("saldo");
+                    System.out.println("Saldo atual: " + saldo);
                     break;
                 case 2:
-                    System.out.println("deposito");
+                    System.out.println("Digite o valor que deseja depositar: ");
+                    valor = leitura.nextDouble();
+                    saldo += valor;
+                    System.out.println("Deposito realizado, valor do deposito: " + valor);
+                    System.out.println("Saldo atual: " + saldo);
                     break;
                 case 3:
-                    System.out.println("saque");
+                    System.out.println("Digite o valor que deseja sacar:");
+                    valor = leitura.nextDouble();
+                    saldo -= valor;
+                    System.out.println("Valor de saque realizado: " + valor);
+                    System.out.println("Saldo atual: " + saldo);
                     break;
                 case 4:
-                    System.out.println("sair");
+                    System.out.println("Finalizando");
                     break;
             }
 
