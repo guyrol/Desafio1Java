@@ -2,9 +2,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
+        //Menu de opções
+        String menu = """
+                Operações
+                1 - Verificar Saldo
+                2 - Depositar valor
+                3 - Sacar
+                4 - Sair
+                Digite a opção desejada
+                """;
 
         //entradas do usuario
-        Scanner leitura = new Scanner(System.in);
         int opcao = 0;
         double valor = 0;
 
@@ -14,6 +22,8 @@ public class Main {
         String tipoConta = "Corrente";
         double saldo = 2300;
 
+
+
         //Inicia do programa com dados do cliente
         System.out.println("*********************************");
         System.out.println(" Nome: " + nome);
@@ -22,15 +32,10 @@ public class Main {
         System.out.println("*********************************\n");
 
 
-
+        Scanner leitura = new Scanner(System.in);
 
         do {
-            System.out.println("- Operações -\n");
-            System.out.println("1 - Verificar Saldo");
-            System.out.println("2 - Depositar valor");
-            System.out.println("3 - Sacar");
-            System.out.println("4 - Sair\n");
-            System.out.println("Digite a opção desejada\n");
+            System.out.println(menu);
 
             opcao = leitura.nextInt();
 
